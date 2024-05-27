@@ -3,9 +3,20 @@
 }
 
 .hw {
-
+    height: 340px;
+    padding: 25px 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
 }
 
 .hwTitle {
-
+    padding: 25px 70px;
+    color: rgb(0, 0, 0);
+    font-family: Montserrat, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 27px;
+    letter-spacing: 0;
+    text-align: left;
 }
