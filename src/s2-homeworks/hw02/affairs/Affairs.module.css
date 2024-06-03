@@ -53,3 +53,11 @@
     flex-wrap: wrap;
     max-width: 450px;
 }
+
+.activeFilterAffairs {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    flex-wrap: wrap;
+    max-width: 450px;
+}
