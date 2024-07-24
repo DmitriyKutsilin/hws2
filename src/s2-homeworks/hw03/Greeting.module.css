@@ -11,7 +11,6 @@
 }
 
 .error {
-    margin-top: 10px;
     color: rgb(204, 0, 0);
     font-family: Montserrat, sans-serif;
     font-size: 14px;
@@ -32,10 +31,11 @@
     font-weight: 500;
     line-height: 20px;
     text-align: left;
+    padding: 8px 12px;
 }
 
 .input:focus {
-
+    outline: none;
 }
 
 .errorInput {
@@ -44,6 +44,15 @@
 
     border: 1px solid rgb(204, 0, 0);
     border-radius: 5px;
+    outline: none;
+    padding: 8px 12px;
+    margin-bottom: 7px;
+
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
 }
 
 .button {
