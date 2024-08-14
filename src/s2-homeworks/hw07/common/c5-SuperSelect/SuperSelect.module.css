@@ -1,9 +1,21 @@
 .select {
+    width: 180px;
+    height: 25px;
+    padding: 0 10px;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 2px;
 }
 
 .select:focus {
+
 }
 
 
 .option:hover {
+    background: rgb(30, 144, 255);
 }

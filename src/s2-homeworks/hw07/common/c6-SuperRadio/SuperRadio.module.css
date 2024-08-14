@@ -1,15 +1,44 @@
 .radio {
+    width: 20px;
+    height: 20px;
 }
 
 .radio::before {
+    /*margin: 2px 2px;*/
+    /*box-sizing: border-box;*/
+    /*visibility: visible;*/
+    /*content: '';*/
+    /*display: inline-block;*/
+    /*width: 20px;*/
+    /*height: 20px;*/
+    /*border: 2px solid black;*/
+    /*border-radius: 50%;*/
 }
 
 
 .radio:checked::before {
+    /*width:10px;*/
+    /*height:10px;*/
+    /*background: #FF0000;*/
+    /*border-radius: 50%;*/
+    /*box-shadow: 0 0 0 2px #434344;*/
+    /*border:8px solid black;*/
+
 }
 
 .label {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    height: 24px;
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.span {
+    height: 24px;
 }

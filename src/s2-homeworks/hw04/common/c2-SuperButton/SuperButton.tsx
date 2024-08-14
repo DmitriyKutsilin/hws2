@@ -26,8 +26,9 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
                         ? ' ' + s.secondary
                         : xType === 'default'
                             ? ' ' + s.default
-                            : '')
+                            : ' ' + s.default)
         + (className ? ' ' + className : '') // задачка на смешивание классов
+    // где xType === default можно добавить проверку на '' и тогда просто оставить после : ''
 
     return (
         <button
