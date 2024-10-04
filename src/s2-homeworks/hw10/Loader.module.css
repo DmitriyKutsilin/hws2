@@ -1,3 +1,46 @@
 .loader {
-    /*свг и/или анимация*/
+    position: relative;
+    width: 90px;
+    height: 90px;
+    animation: 1.5s linear infinite rotate;
+    background: transparent;
+
+
+    /*background: conic-gradient(from 90deg at 50% 50%, rgba(255, 255, 255, 0) 0deg, #512DE4 360deg);*/
 }
+
+.innerCircle {
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 76px;
+    height: 76px;
+    background-color: white;
+    border: 5px solid transparent;
+
+}
+
+/*.newLoader {*/
+/*    box-sizing: content-box;*/
+
+/*    position: relative;*/
+/*    width: 90px;*/
+/*    height: 90px;*/
+/*    animation: 1.5s linear infinite rotate;*/
+/*    border-radius: 50%;*/
+
+
+/*    background: conic-gradient(from 90deg at 50% 50%, rgba(255, 255, 255, 0) 0deg, #512DE4 360deg);*/
+/*}*/
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
