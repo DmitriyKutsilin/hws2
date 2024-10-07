@@ -1,8 +1,32 @@
 .container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 30px;
+
+    color: rgb(0, 0, 0);
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
 }
 
 .wrapper {
+    /*display: flex;*/
+    /*gap: 22px;*/
+    /*align-items: center;*/
+
+    display: grid;
+    /*grid-auto-columns: 204px;*/
+    grid-template-columns: 28px 148px 28px;
+    gap: 22px;
+    align-items: center;
 }
 
 .number {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
 }
