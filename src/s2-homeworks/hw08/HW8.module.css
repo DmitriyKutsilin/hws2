@@ -36,11 +36,13 @@
     font-weight: 600;
     background: rgb(229, 229, 229);
     height: 36px;
+    color: black;
 }
 
 .nameCol {
     width: 303px;
     padding-left: 17px;
+
 }
 
 .ageCol {

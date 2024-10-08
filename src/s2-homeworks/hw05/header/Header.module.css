@@ -10,6 +10,8 @@
     align-items: center;
     height: 60px;
     padding: 0 70px;
+    background-color: #FFFFFF;
+    color: black;
 }
 
 .header h1 {
