@@ -35,9 +35,11 @@ const HW14 = () => {
         getTechs(value)
             .then((res) => {
                 // делает студент
-
                 // сохранить пришедшие данные
-
+                if (res) {
+                    setTechs(res.data.techs)
+                    // setLoading(false)
+                }
                 //
             })
     }
@@ -48,12 +50,16 @@ const HW14 = () => {
 
         // добавить/заменить значение в квери урла
         // setSearchParams(
-
-        //
+        if (value.trim() !== '') {
+            setSearchParams({find: value.replace(/\s+/g, ' ').trim()})
+        } else {
+            setSearchParams({})
+        }
     }
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
+        console.log(params)
         sendQuery(params.find || '')
         setFind(params.find || '')
     }, [])
