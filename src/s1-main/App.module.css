@@ -3,6 +3,7 @@
 }
 
 .hw {
+    position: relative;
     min-height: 336px;
     height: 100%;
     padding: 25px 70px;

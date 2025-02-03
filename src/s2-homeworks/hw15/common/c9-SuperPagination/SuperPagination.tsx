@@ -2,6 +2,7 @@ import React from 'react'
 import SuperSelect from '../../../hw07/common/c5-SuperSelect/SuperSelect'
 import {Pagination} from '@mui/material'
 import s from './SuperPagination.module.css'
+import {log} from "node:util";
 
 export type SuperPaginationPropsType = {
     id?: string
@@ -16,14 +17,18 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
         page, itemsCountForPage, totalCount, onChange, id = 'hw15',
     }
 ) => {
-    const lastPage = 10 // пишет студент // вычислить количество страниц
+    const lastPage =  Math.ceil(totalCount/itemsCountForPage)
+    // пишет студент // вычислить количество страниц
 
     const onChangeCallback = (event: any, page: number) => {
         // пишет студент
+        onChange(page, itemsCountForPage)
     }
 
     const onChangeSelect = (event: any) => {
         // пишет студент
+        onChange(page, event.currentTarget.value)
+
     }
 
     return (
@@ -31,8 +36,46 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
             <Pagination
                 id={id + '-pagination'}
                 sx={{
+                    zIndex: "1",
+                    '& .MuiPagination-ul': {
+                        gap: "12px"
+                    },
+                    '& .MuiPaginationItem-root': {
+                        color: "#0D0B0C",
+                        minWidth: "24px",
+                        margin: 0,
+                        padding: 0,
+                        width: "24px",
+                        height: "24px"
+                    },
+                    '& .MuiPagination-ul > li': {
+                        width: "24px"
+                    },
+                    '& .MuiPaginationItem-sizeMedium': {
+                        width: "24px"
+                    },
+                    '& .MuiPaginationItem-root.Mui-selected': {
+                        ':hover': {
+                            backgroundColor: "#349bff"
+                        },
+                        backgroundColor: "#0066CC",
+                        color: "#FFF",
+                    },
+                    // '& .Mui-selected:hover': {
+                    //     backgroundColor: "#0066CC",
+                    // },
+                    '& .MuiPaginationItem-ellipsis': {
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center'
+                    },
+                    '& .MuiPaginationItem-text': {
+                        fontSize: "14px",
+                        lineHeight: "16px"
+                    }
                     // стили для Pagination // пишет студент
                 }}
+                shape={"rounded"}
                 page={page}
                 count={lastPage}
                 onChange={onChangeCallback}
@@ -41,12 +84,13 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
             />
 
             <span className={s.text1}>
-                показать
+                Показать
             </span>
 
             <SuperSelect
                 id={id + '-pagination-select'}
                 value={itemsCountForPage}
+                className={s.select}
                 options={[
                     {id: 4, value: 4},
                     {id: 7, value: 7},
